@@ -71,11 +71,16 @@ jobs:
           name: playwright-report
           path: playwright-report
 
+      - name: Disable Jekyll for Pages
+        run: touch playwright-report/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./playwright-report
+          publish_branch: gh-pages
+          keep_files: true
 
       - name: Send email with HTML report
         uses: dawidd6/action-send-mail@v3
