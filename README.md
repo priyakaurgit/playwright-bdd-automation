@@ -1,8 +1,7 @@
 Priya Playwright Automation
 
-🚀 End-to-end test automation framework built with Playwright, TypeScript, and BDD (playwright-bdd).
-This project automates the real-world demo site automationexercise.com
-and is designed for portfolio showcase + CI/CD integration.
+🚀 Automated end-to-end testing suite for AutomationExercise
+ using Playwright, TypeScript, and Playwright-BDD. This project covers major flows like Registration, Login, Cart operations, and Checkout, and implements a CI/CD pipeline with GitHub Actions for automated testing and Github Pages (HTML Test Report Deployment)..
 
 📌 Features
 
@@ -18,7 +17,11 @@ and is designed for portfolio showcase + CI/CD integration.
 
 ✅ ESLint + Prettier for clean code
 
-✅ Ready for GitHub Actions CI/CD
+✅ GitHub Actions CI/CD
+
+✅ GitHub Pages Report
+
+✅ Daily run with Email Notification
 
 🏗️ Project Structure
 ```
@@ -43,6 +46,8 @@ priya-playwright-automation/
 ├── tsconfig.json
 ├── .eslintrc.json
 ├── .prettierrc
+├── .env
+├── ci_cd.yml 
 └── README.md
 
 ```
@@ -60,11 +65,21 @@ Install dependencies
 npm install
 ```
 
+Configure the environment variables
+Add a .env file in the root folder:
+
+BASE_URL=https://automationexercise.com
+USER_EMAIL=<your-email>
+USER_PASSWORD=<your-password>
+
+⚠️ Note: The .env file is ignored by git, so you must create it locally.
+
+▶️ Running Tests Locally
+
 Generate BDD tests
 ```
 npx bddgen
 ```
-▶️ Running Tests
 
 Run all tests:
 ```
@@ -106,11 +121,35 @@ npx playwright show-report
 
 🚀 CI/CD (GitHub Actions)
 
-This project includes a sample workflow (.github/workflows/tests.yml) to run tests automatically on push and pull requests.
+This project includes a sample workflow (.github/workflows/ci-cd.yml) to run tests automatically on push and pull requests and also at 5 am daily.
 
+🚀 GitHub Pages Report
+
+After every run, the HTML test report is deployed to GitHub Pages:
+
+URL format: https://<username>.github.io/<repository-name>/
+
+
+🌐Environment Variables
+Name	Description
+BASE_URL	Application base URL
+USER_EMAIL	Test user email for login
+USER_PASSWORD	Test user password
+EMAIL_USERNAME	Gmail account for email notifications
+EMAIL_PASSWORD	Gmail app password (for GitHub Actions)
+
+🔒 Secrets are configured in GitHub Actions for secure CI/CD execution.
+
+💡 Future Improvements
+   🔹 Cross-browser and mobile emulation testing.
+   🔹 API Testing
+   🔹Add parallel test execution with sharding for faster runs.
+   🔹 Integrate Allure Reports for richer reporting (screenshots, videos, retries).
+
+   
 🧑‍💻 Author
 
 👩 Priya Kaur
-    LinkedIn: www.linkedin.com/in/priya-kaur-profile
+👥 LinkedIn: www.linkedin.com/in/priya-kaur-profile
 
 📌 Portfolio Automation Project
