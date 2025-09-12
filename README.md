@@ -65,12 +65,12 @@ Install dependencies
 npm install
 ```
 
-Configure the environment variables
-Add a .env file in the root folder:
+Configure the environment variables  
+Add a .env file in the root folder:  
 
-BASE_URL=https://automationexercise.com
-USER_EMAIL=<your-email>
-USER_PASSWORD=<your-password>
+BASE_URL=https://automationexercise.com  
+USER_EMAIL=`<your-email>`  
+USER_PASSWORD=`<your-password>`  
 
 ⚠️ Note: The .env file is ignored by git, so you must create it locally.
 
@@ -127,29 +127,29 @@ This project includes a sample workflow (.github/workflows/ci-cd.yml) to run tes
 
 After every run, the HTML test report is deployed to GitHub Pages:
 
-URL format: https://<username>.github.io/<repository-name>/
+URL format: `https://<username>.github.io/<repository-name>/`
 
 
-🌐Environment Variables
-Name	Description
-BASE_URL	Application base URL
-USER_EMAIL	Test user email for login
-USER_PASSWORD	Test user password
-EMAIL_USERNAME	Gmail account for email notifications
-EMAIL_PASSWORD	Gmail app password (for GitHub Actions)
+🌐Environment Variables Git  
+Name	Description  
+BASE_URL	Application base URL  
+USER_EMAIL	Test user email for login  
+USER_PASSWORD	Test user password  
+EMAIL_USERNAME	Gmail account for email notifications  
+EMAIL_PASSWORD	Gmail app password (for GitHub Actions)  
 
 🔒 Secrets are configured in GitHub Actions for secure CI/CD execution.
 
-💡 Future Improvements
-   🔹 Cross-browser and mobile emulation testing.
-   🔹 API Testing
-   🔹Add parallel test execution with sharding for faster runs.
-   🔹 Integrate Allure Reports for richer reporting (screenshots, videos, retries).
+💡 Future Improvements  
+   🔹 Cross-browser and mobile emulation testing.  
+   🔹 API Testing  
+   🔹 Add parallel test execution with sharding for faster runs.  
+   🔹 Integrate Allure Reports for richer reporting (screenshots, videos, retries).  
 
-   
+
 🧑‍💻 Author
 
-👩 Priya Kaur
+👩 Priya Kaur  
 👥 LinkedIn: www.linkedin.com/in/priya-kaur-profile
 
 📌 Portfolio Automation Project
