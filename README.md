@@ -131,7 +131,7 @@ URL format: `https://<username>.github.io/<repository-name>/`
 
 
 🌐Environment Variables Git  
-Name	Description  
+
 BASE_URL	Application base URL  
 USER_EMAIL	Test user email for login  
 USER_PASSWORD	Test user password  
